@@ -4,7 +4,6 @@ use Test::More;
 use Math::Radix::DecimalExp;
 
 subtest binary => sub {
-    my ($second, $first);
     my $base = Math::Radix::DecimalExp->new(2);
     is_deeply [$base->to_radix_exp(0)],  [0, 0];
     is_deeply [$base->to_radix_exp(1)],  [0, 1];
@@ -20,7 +19,6 @@ subtest binary => sub {
 };
 
 subtest oct => sub {
-    my ($second, $first);
     my $base = Math::Radix::DecimalExp->new(8);
     is_deeply [$base->to_radix_exp(1)],  [0, 1];
     is_deeply [$base->to_radix_exp(2)],  [0, 2];
@@ -35,7 +33,6 @@ subtest oct => sub {
 };
 
 subtest hex => sub {
-    my ($second, $first);
     my $base = Math::Radix::DecimalExp->new(16);
     is_deeply [$base->to_radix_exp(1)],  [0, 1];
     is_deeply [$base->to_radix_exp(2)],  [0, 2];
